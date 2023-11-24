@@ -1,0 +1,76 @@
+---
+import FooterBio from "../components/footer_bio.astro";
+import PageContents from "../components/page_contents.astro";
+// import AboutCard from "../components/about_card.astro";
+import AboutBox from "../components/about_box.astro";
+import NavBar from "../components/nav_bar.astro";
+import DynamicNameChanger from "../components/DynamicNameChanger.vue";
+---
+
+<html lang="en">
+	<nav>
+		<NavBar />
+	</nav>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <link rel="icon" type="image/svg+xml" href="res/T_Logo_Web_Crimson.svg" /> -->
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<DynamicNameChanger client:load/>
+		<!-- home -->
+		<!-- <PageContents
+			id="myPage"
+			contentTitle="tirumala_rao"
+			contentBody="mechanical_engineer && game_developer"
+		/> -->
+		<!-- about -->
+		<section
+			class="h-screen w-full flex flex-col justify-center items-center"
+		>
+			<div
+				class="box-content w-80 mx-auto text-black_dark font-inter text-md sm:w-2/5"
+			>
+				<AboutBox>
+					<div>
+						Hello there! I am Tirumala. A <span
+							class="text-crimson_red font-inter text-lg font-bold"
+							>mechanical engineer</span
+						>
+						 graduated from Rajiv Gandhi University of Knowledge
+						Technologies in 2022, I am currently working as a Design Engineer at
+						Toshiba Transmission and Distribution Systems.
+					</div>
+				</AboutBox>
+				<div class="p-4"></div>
+				<AboutBox>
+					<div class="text-right">
+						I am also a <span
+							class="text-crimson_red font-inter font-bold text-lg"
+							>hobbyist .net developer</span
+						> developing games and simulators when I am free, for gamejams or as side projects where I model, texture,
+						rig & animate 3D assets.
+						<span class="block">I also develop
+						addons for autoCAD with .net for process automation.</span>
+						<span class="inline-block">Feel free to reach me out for any queries!</span>
+					</div>
+				</AboutBox>
+			</div>
+			<!-- <AboutCard
+				contentTitle="mechanical engineer "
+				contentBody="graduated ftom IIITs in 2022 currently working as design engineer at Toshiba ESS"
+			/>
+			<AboutCard
+				contentTitle="hobbyist game developer "
+				contentBody="making small games for gamejams or side projects as a hobby"
+			/> -->
+		</section>
+	</body>
+	<footer>
+		<FooterBio />
+	</footer>
+
+</html>
